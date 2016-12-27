@@ -16,9 +16,8 @@ class CommonElementsSpec extends FlatSpec with Matchers {
     val propConcatLists = forAll { (l1: List[Int], l2: List[Int]) =>
       CommonElements.findCommon (l1,l2).toSeq.sorted ==l1.toSet.intersect(l2.toSet).toSeq.sorted }
 
-    val result = propConcatLists.apply(Gen.Parameters.default)
+    val result = propConcatLists.check(Test.Parameters.default)
 
-    result.success === True
   }
 
 
@@ -34,8 +33,7 @@ class CommonElementsSpec extends FlatSpec with Matchers {
       CommonElements.findCommonSorted (l1.sorted,l2.sorted).toSeq.sorted ==l1.sorted.toSet.intersect(l2.sorted.toSet).toSeq.sorted }
 
 
-     val result = propConcatLists.apply(Gen.Parameters.default)
+     val result = propConcatLists.check(Test.Parameters.default)
 
-    result.success === True
   }
 }

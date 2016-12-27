@@ -22,7 +22,7 @@ object CommonElements {
     val commons3 = findCommon(list1, List.empty)
 
 
-    val commonsSorted = findCommon(List(0), List(0))
+    val commonsSorted = findCommonSorted(list1.sorted, list2.sorted)
 
     println (commonsSorted)
 
