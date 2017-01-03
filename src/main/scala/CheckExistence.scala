@@ -2,7 +2,7 @@ import scala.annotation.tailrec
 
 
 //Given a sorted array of positive integers,
-// is it possible to check existence of two integers from that array that sum up to a given sum?
+// check existence of two integers from that array that sum up to a given number
 
 object CheckExistence {
 
